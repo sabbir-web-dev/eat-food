@@ -1,0 +1,35 @@
+.nav-wrap{
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--white);
+}
+.logo{
+  width: 200px;
+}
+.nav-wrap ul{
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  gap: 1rem;
+  font-size:1rem;
+}
+.link{
+  color:var(--text);
+  text-decoration: none;
+}
+.card-wrap{
+  position: relative;
+}
+.card-wrap .card-count{
+  position: absolute;
+  top:-8px; 
+  color:var(--primary);
+}
+
+@media only screen and (max-height: 400px) {
+  .nav-wrap {
+    height: 70px;
+  }
+}
