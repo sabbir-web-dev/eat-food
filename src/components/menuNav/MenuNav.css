@@ -1,0 +1,11 @@
+.menu-nav{
+  background: var(--white);
+}
+.menu-nav ul{
+  display: flex;
+  gap: 2rem;
+}
+.menu-link{
+  font-weight: 700;
+  font-size: 1rem;
+}

@@ -26,4 +26,8 @@ export const lunchImg = {
 export const icons = {
   logo: require("./icons/logo.png"),
   logo2: require("./icons/logo2.png"),
+  heroS1: require("./icons/heroS1.png"),
+  heroS2: require("./icons/heroS2.png"),
+  heroS3: require("./icons/heroS3.png"),
+  heroS4: require("./icons/heroS4.png"),
 };

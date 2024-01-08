@@ -12,7 +12,7 @@ function Navber() {
 
     useEffect(() => {
       const handleScroll = () => {
-        if(window.scrollY > 100){
+        if(window.scrollY > 200){
           setNavSticy(true);
         }else{
           setNavSticy(false)
@@ -26,7 +26,7 @@ function Navber() {
     },[])
     console.log(navSticy)
   return (
-    <nav className="nav-wrap padding ">
+    <nav className={`nav-wrap padding ${navSticy ? " fiext" : " "} `}>
       <Link to="/" className="logo center">
         <img src={logo2} alt="logo" />
       </Link>
@@ -37,10 +37,10 @@ function Navber() {
           <span className="card-count">0</span>
           </div>
         </Link>
-        <Link to="" className="link">
+        <Link to="/login" className="link">
           Login
         </Link>
-        <Link to="" className="link btn">
+        <Link to="/login" className="link btn">
           Sign In
         </Link>
       </ul>

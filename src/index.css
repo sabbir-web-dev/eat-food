@@ -12,6 +12,7 @@
   --white: #fff;
   --secondary: #ecf0f1;
   --btn: #8e44ad;
+  --hero:#ffb6d2cb;;
 }
 img{
   width: 100%;
@@ -22,6 +23,7 @@ body{
   font-size: 62%;
   color: var(--text);
   background-color: var(--secondary);
+  transform: .3s all ease;
 }
 .center{
   display: flex;
