@@ -31,3 +31,9 @@ export const icons = {
   heroS3: require("./icons/heroS3.png"),
   heroS4: require("./icons/heroS4.png"),
 };
+
+export const aboutPhoto = {
+  about1: require("./choseus/photo1.png"),
+  about2: require("./choseus/photo2.png"),
+  about3: require("./choseus/photo3.png")
+}

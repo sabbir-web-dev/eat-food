@@ -24,7 +24,6 @@ function Navber() {
       window.removeEventListener("scroll", handleScroll)
       }
     },[])
-    console.log(navSticy)
   return (
     <nav className={`nav-wrap padding ${navSticy ? " fiext" : " "} `}>
       <Link to="/" className="logo center">

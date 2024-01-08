@@ -1,7 +1,7 @@
 import { lunchImg } from "../assets/ImgManaz";
 
 const {img1,img2,img3,img4,img5,img6} = lunchImg
-var lunch = [
+var lunchData = [
   {
     key: "B00wOSTsdgdsdaKEDDsdf",
     category: "lunch",
@@ -68,4 +68,4 @@ var lunch = [
     quantity: 1,
   },
 ];
-export default lunch;
+export default lunchData;

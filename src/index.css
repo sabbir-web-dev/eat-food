@@ -20,7 +20,6 @@ img{
   height: auto;
 }
 body{
-  font-size: 62%;
   color: var(--text);
   background-color: var(--secondary);
   transform: .3s all ease;
