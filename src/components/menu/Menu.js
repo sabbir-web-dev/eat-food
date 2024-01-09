@@ -1,13 +1,22 @@
 import "./Menu.css";
-import lunchData from "./../../fackeData/lunch";
 import Card from "../card/Card";
+import { useEffect, useState } from "react";
+import useFoodContext from "../../hook/useFoodHook";
+import lunchData from "../../fackeData/lunch";
+
 function Menu() {
+  const [foodData, setFoodData] = useState();
+  const { data } = useFoodContext();
+
+  useEffect(() => {
+    setFoodData(data);
+  }, [data]);
+
+
   return (
     <div className=" menu-wrap padding">
       <div className="menu">
-        {lunchData.map((data) => (
-          <Card key={data.id} item={data} />
-        ))}
+        {foodData && foodData.map((data) => <Card key={data.key} item={data} />)}
       </div>
     </div>
   );

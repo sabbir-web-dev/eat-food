@@ -2,11 +2,25 @@ import { useState } from 'react'
 import './MenuNav.css'
 
 import './MenuNav.css'
+import useFoodContext from '../../hook/useFoodHook';
+import lunchData from './../../fackeData/lunch';
+import breakfastData from './../../fackeData/breackfast';
+import dinnerData from './../../fackeData/dinner';
 function MenuNev() {
   const [active,setActive] = useState(2);
+  const {loadData} = useFoodContext();
 
   const hendleClick = (e) => {
     setActive(e)
+    if(e ===1){
+      loadData(breakfastData)
+    }
+    if(e === 2) {
+      loadData(lunchData)
+    }
+    if(e === 3){
+      loadData(dinnerData)
+    }
   }
   return (
     <nav className='menu-nav padding center'>
