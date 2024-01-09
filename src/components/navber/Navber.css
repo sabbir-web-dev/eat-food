@@ -39,9 +39,12 @@
   top:-8px; 
   color:var(--primary);
 }
+.nav-cover{
+  height: 10vh;
+}
 
 @media only screen and (max-height: 400px) {
-  .nav-wrap {
+  .nav-wrap,.nav-cover {
     height: 70px; 
   }
 }

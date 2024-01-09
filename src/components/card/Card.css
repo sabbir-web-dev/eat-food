@@ -20,3 +20,7 @@
 .item-img img:hover{
   transform: scale(1.09);
 }
+.card-link{
+  text-decoration: none;
+  color:var(--text)
+}

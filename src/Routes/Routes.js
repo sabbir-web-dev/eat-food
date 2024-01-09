@@ -13,12 +13,12 @@ function App() {
   return (
     <BrowserRouter>
       <Navber />
-      <div style={{height:"10vh"}} />
+      <div className='nav-cover' />
       <Routes>
         <Route index element={<Home />}/>
         <Route path="address" element={<Address />} />
         <Route path="login" element={<Login/>} />
-        <Route path="food" element={<FoodDetails />} />
+        <Route path="food/:key" element={<FoodDetails />} />
         <Route path="customer-location" element={<OrderConfrom />} />
         <Route path="*" element={<Error />} />
       </Routes>

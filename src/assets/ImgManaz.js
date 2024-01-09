@@ -30,6 +30,7 @@ export const icons = {
   heroS2: require("./icons/heroS2.png"),
   heroS3: require("./icons/heroS3.png"),
   heroS4: require("./icons/heroS4.png"),
+  bg : require("./icons/bannerbackground.png")
 };
 
 export const aboutPhoto = {

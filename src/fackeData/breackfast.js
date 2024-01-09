@@ -1,8 +1,6 @@
 
 import { breakfastImg } from './../assets/ImgManaz';
 
-console.log(breakfastImg);
-
 const {img1,img2,img3,img4,img5,img6} = breakfastImg
 var breakfastData = [
   {
