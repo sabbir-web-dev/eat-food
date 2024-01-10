@@ -143,13 +143,14 @@ body{
 /* --login-- */
 .login-wrap{
   width: 100vw;
-  height: 90vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-image: image-set(url("./assets//icons/bannerbackground.png"));
   background-repeat: no-repeat;
   background-position: -100px center;
+  flex-direction: column;
 }
 .login{
   display: flex;
@@ -170,7 +171,11 @@ body{
   display: flex;
   gap:20px;
   width: 100%;
+  max-width: 400px;
   flex-direction: column;
+}
+.input-wrap{
+  width: 100%;
 }
 .login input{
   width: 100%;
@@ -193,7 +198,30 @@ body{
   background: var(--hero);
   color:var(--text)
 }
+.S{
+  color:#67fd5c !important;
+}
 .login p{
   color:var(--primary);
   cursor: pointer;
+}
+.F{
+  color:red I !important;
+}
+.google-signIn{
+  border-radius: 20px;
+  border: 1px solid #969696;
+  width: 100%;
+  padding:10px ;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:10px;
+  transition: .3s ease;
+  cursor: pointer;
+}
+.google-signIn:hover{
+  background-color: var(--hero);
+  backdrop-filter: blur(20px);
 }

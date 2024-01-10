@@ -24,7 +24,7 @@
   display: flex;
   align-items: center;
   font-weight: bold;
-  gap: 1rem;
+  gap: 1.2rem;
   font-size:1rem;
 }
 .link{
@@ -39,10 +39,25 @@
   top:-8px; 
   color:var(--primary);
 }
+.l-wrap{
+  display: flex;
+  gap:1.2rem;
+  align-items: center;
+}
 .nav-cover{
   height: 10vh;
 }
-
+.progile-wrap{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color:#fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 @media only screen and (max-height: 400px) {
   .nav-wrap,.nav-cover {
     height: 70px; 

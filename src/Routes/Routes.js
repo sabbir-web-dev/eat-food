@@ -12,8 +12,6 @@ import Login from './../Pages/Login';
 function App() {
   return (
     <BrowserRouter>
-      <Navber />
-      <div className='nav-cover' />
       <Routes>
         <Route index element={<Home />}/>
         <Route path="address" element={<Address />} />

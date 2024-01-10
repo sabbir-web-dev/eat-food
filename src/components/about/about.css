@@ -1,3 +1,4 @@
+
 .col-3 {
   width: 100%;
   display: grid;
@@ -17,8 +18,9 @@
 }
 .about-wrap {
   font-size: 1rem;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
 }
 .about-wrap h2 {
   font-size: 1.5rem;

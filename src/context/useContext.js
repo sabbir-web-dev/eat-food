@@ -10,6 +10,7 @@ const FoodProvider = ({ children }) => {
     foodPrice: state.foodPrice,
     menuData : state.menuData,
     selectData: state.selectData,
+    user: state.user,
     loadData: (url) => {
       dispatch({ type: "LOAD_DATA", payload: url });
     },
@@ -18,6 +19,12 @@ const FoodProvider = ({ children }) => {
     },
     setPrice: (price) => {
       dispatch({type:"ADD_PRICE",payload:price})
+    },
+    getUser:(user) => {
+      dispatch({type:"GET_USER",payload:user})
+    },
+    getSignUp:(signUp) => {
+      dispatch({type:"GET_SIGN_UP",payload:signUp})
     }
     };
 

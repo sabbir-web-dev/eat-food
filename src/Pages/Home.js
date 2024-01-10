@@ -4,6 +4,7 @@ import Menu from '../components/menu/Menu'
 import About from '../components/about/About'
 import Footer from './../components/footer/Footer';
 import MenuNev from '../components/menuNav/MenuNav'
+import Navber from '../components/navber/Navber';
 
 
 
@@ -11,11 +12,13 @@ import MenuNev from '../components/menuNav/MenuNav'
 function Home() {
   return (
     <div>
-      {/* <Hero /> */}
+      <Navber/>
+      <div className='nav-cover' />
+      <Hero />
       <MenuNev />
       <Menu />
-      {/* <About />
-      <Footer /> */}
+      <About /> 
+      <Footer /> 
     </div>
   )
 }
