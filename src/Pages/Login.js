@@ -12,7 +12,7 @@ import useFoodContext from "./../hook/useFoodHook";
 import useLoginFormik from "../Formik/Formik";
 
 function Login() {
-  const { getUser, user } = useFoodContext();
+  const { getUser, user, getSignUp } = useFoodContext();
   const [signIn, setSignIn] = useState(false);
 
   const [signUp, setSignUp] = useState(false);
@@ -24,7 +24,6 @@ function Login() {
 
   const onSubmit = (values) => {
     const { email, password, name } = values;
-    console.log("click");
     if (signIn) {
       console.log("sighUp");
       createUserWithEmailAndPassword(auth, email, password)
@@ -51,6 +50,7 @@ function Login() {
     }
   };
 
+
   const formik = useLoginFormik(onSubmit);
 
   const signInGoogle = () => {
@@ -67,7 +67,7 @@ function Login() {
       <div className="login">
         <img src={icons.logo2} alt="" />
         <form action="" onSubmit={formik.handleSubmit}>
-          {signUp ? (
+          {user.signUp ? (
             <>
               <input
                 type="email"
@@ -144,16 +144,16 @@ function Login() {
             </>
           )}
 
-          {signIn ? (
+          {user.signUp ? (
+            <button type="submit">Login</button>
+          ) : (
             <button type="submit" onClick={() => setSignIn(!signIn)}>
               Sign In
             </button>
-          ) : (
-            <button type="submit">Login</button>
           )}
         </form>
-        <p onClick={() => setSignIn(!signIn)}>
-          {signIn ? "Already have an account" : "Create a acount"}
+        <p onClick={() => getSignUp(!user.signUp)}>
+          {user.signUp ? "Create a acount" : "Already have an account"}
         </p>
         {signUp && <p className="S">Sign Up Susses</p>}
         {login && <p className="S">Login Susses</p>}

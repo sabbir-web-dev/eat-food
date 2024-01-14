@@ -46,23 +46,38 @@ const reducer = (state, action) => {
 
     case "GET_USER":
       const user = auth.currentUser;
-      const { displayName, email, photoURL } = user;
-      const userName = displayName && displayName;
-      const userEmail = email && email;
-      const userPhoto = photoURL && photoURL;
-      return {
-        ...state,
-        user: {
-          ...state.user,
-          name: userName,
-          email: userEmail,
-          img: userPhoto, 
-        },
-      };
+      if (user) {
+        const { displayName, email, photoURL } = user;
+        const userName = displayName || " ";
+        const userEmail = email || " ";
+        const userPhoto = photoURL || null;
+
+        return {
+          ...state,
+          user: {
+            ...state.user,
+            name: userName,
+            email: userEmail,
+            img: userPhoto,
+            signIn: action.payload,
+          },
+        };
+      } else {
+        return {
+          ...state,
+          user: {
+            ...state.user,
+            name: " ",
+            email: " ",
+            img: null,
+            signIn: action.payload,
+          },
+        };
+      }
     case "GET_SIGN_UP":
-    return{ 
-      user: {...state.usr,signUp: action.payload}
-    }
+      return {
+        user: { ...state.user, signUp: action.payload },
+      };
     default:
       return state;
   }

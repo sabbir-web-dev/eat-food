@@ -3,12 +3,12 @@ import { AiOutlineRight } from "react-icons/ai";
 import { CgShoppingCart } from "react-icons/cg";
 import React, { useEffect, useState } from "react";
 import useFoodContext from './../hook/useFoodHook';
-import {  Navigate, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 function FoodDetails() {
   const [foodData,setFoodData] =useState({})
   const [count,setCount] = useState(1);
-  const [sImg,setSimg] = useState([]);
+  const [,setSimg] = useState([]);
   // const [allImg,setAllImg] = useState({})
   const [showPrice,setShowPrice] =useState()
 

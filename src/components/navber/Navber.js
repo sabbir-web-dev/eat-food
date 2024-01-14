@@ -10,9 +10,8 @@ import { auth } from "../../firebase/firebase";
 function Navber() {
   const { logo2 } = icons;
   const [navSticy, setNavSticy] = useState(false);
-  const { selectData,user,setSignUp} = useFoodContext();
-  const {name,signIn} = user
-
+  const { selectData, user, getSignUp } = useFoodContext();
+  const { name, signIn, img } = user;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,15 +28,17 @@ function Navber() {
     };
   }, []);
 
-  const {getUser} = useFoodContext();
+  const { getUser } = useFoodContext();
 
   const hendleSignOut = () => {
-    auth.signOut()
-    .then(res => {
-      getUser(false);
-    })
-    .catch(err => console.log(err.message))
-  }
+    auth
+      .signOut()
+      .then((res) => {
+        getUser(false);
+        getSignUp(false);
+      })
+      .catch((err) => console.log(err.message));
+  };
   return (
     <nav className={`nav-wrap padding ${navSticy ? " fiext" : " "} `}>
       <Link to="/" className="logo center">
@@ -46,20 +47,28 @@ function Navber() {
       <ul>
         <Link to="" className="link">
           <div className="card-wrap">
-            <CgShoppingCart />
-            <span className="card-count">{selectData.length}</span>
+            <Link className="link" to="checkout">
+              <CgShoppingCart />
+            </Link>
+            <span className="card-count">
+              {selectData && selectData.length}
+            </span>
           </div>
         </Link>
         {signIn ? (
-          <div className="progile-wrap" onClick={hendleSignOut} >
-            {name && <h1>{name[0]}</h1>}
+          <div className="progile-wrap" onClick={hendleSignOut}>
+            {img ? <img src={img} alt="" /> : name && <h1>{name[0]}</h1>}
           </div>
         ) : (
           <div className="l-wrap">
-            <Link to="/login" className="link">
+            <Link to="/login" onClick={() => getSignUp(true)} className="link">
               Login
             </Link>
-            <Link to="/login" onClick={() =>  setSignUp(true)} className="link btn">
+            <Link
+              to="/login"
+              onClick={() => getSignUp(false)}
+              className="link btn"
+            >
               Sign In
             </Link>
           </div>

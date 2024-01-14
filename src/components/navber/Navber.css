@@ -57,6 +57,10 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  overflow: hidden;
+}
+.progile-wrap{
+
 }
 @media only screen and (max-height: 400px) {
   .nav-wrap,.nav-cover {
