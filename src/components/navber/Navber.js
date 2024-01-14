@@ -30,6 +30,8 @@ function Navber() {
 
   const { getUser } = useFoodContext();
 
+
+  // sign out function 
   const hendleSignOut = () => {
     auth
       .signOut()
