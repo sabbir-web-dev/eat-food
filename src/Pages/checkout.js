@@ -2,8 +2,8 @@ import React from 'react';
 
 const Checkout = () => {
   return (
-    <div>
-      CheackOut
+    <div className="cheack-wrap">
+      
     </div>
   );
 }
